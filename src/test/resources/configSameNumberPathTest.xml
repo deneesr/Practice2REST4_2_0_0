@@ -1,0 +1,18 @@
+<configuration>
+    <controller fullClassName="ua.com.as.service.controller7.SameNumberPathController">
+        <query path="/user/{idInt}" http_methods="PUT">
+            <method_name>test1</method_name>
+            <parameter paramtype="path">
+                <name>idInt</name>
+                <type>Integer</type>
+            </parameter>
+        </query>
+        <query path="/user/{idShort}" http_methods="PUT">
+            <method_name>test2</method_name>
+            <parameter paramtype="path">
+                <name>idShort</name>
+                <type>Short</type>
+            </parameter>
+        </query>
+    </controller>
+</configuration>

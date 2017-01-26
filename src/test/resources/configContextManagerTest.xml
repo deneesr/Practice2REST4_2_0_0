@@ -1,0 +1,93 @@
+<configuration>
+
+    <auto-scan packages="ua.com.as.service.parsing.controller1, ua.com.as.service.parsing.controller2"/>
+
+    <controller fullClassName="ua.com.as.service.ControllerClassForContextManager">
+
+        <query path="/testGetXml/{id}" response_type="JSON" http_methods="GET, POST">
+
+            <method_name>testGetXml</method_name>
+
+            <parameter paramtype="path">
+                <name>id</name>
+                <type>byte</type>
+            </parameter>
+
+        </query>
+
+        <query path="/testGetWithQueryParamXml/{id}" response_type="JSON" http_methods="GET">
+
+            <method_name>testGetWithQueryParamXml</method_name>
+
+            <parameter paramtype="path">
+                <name>id</name>
+                <type>int</type>
+            </parameter>
+
+            <parameter paramtype="query">
+                <name>name</name>
+                <type>String</type>
+            </parameter>
+
+        </query>
+
+        <query path="/testPostWithQueryParamXml/{index}" response_type="JSON" http_methods="POST">
+
+            <method_name>testPostWithQueryParamXml</method_name>
+
+            <parameter paramtype="path">
+                <name>index</name>
+                <type>short</type>
+            </parameter>
+
+            <parameter paramtype="query">
+                <name>alphabet</name>
+                <type>char</type>
+            </parameter>
+
+        </query>
+
+        <query path="/postTestXml/{index}/{alphabet}" response_type="JSON" http_methods="POST">
+
+            <method_name>postTestXml</method_name>
+
+            <parameter paramtype="path">
+                <name>index</name>
+                <type>short</type>
+            </parameter>
+
+            <parameter paramtype="path">
+                <name>alphabet</name>
+                <type>String</type>
+            </parameter>
+
+        </query>
+
+        <query path="/putTestXml/{index}/{alphabet}" response_type="JSON" http_methods="PUT">
+
+            <method_name>putTestXml</method_name>
+
+            <parameter paramtype="path">
+                <name>index</name>
+                <type>int</type>
+            </parameter>
+
+            <parameter paramtype="path">
+                <name>alphabet</name>
+                <type>String</type>
+            </parameter>
+
+            <parameter paramtype="query">
+                <name>key</name>
+                <type>char</type>
+            </parameter>
+
+        </query>
+
+        <query path="/deleteTestXml" response_type="JSON" http_methods="DELETE">
+            <method_name>deleteTestXml</method_name>
+        </query>
+
+    </controller>
+
+</configuration>

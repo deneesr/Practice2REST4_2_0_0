@@ -1,0 +1,19 @@
+<configuration>
+
+    <controller fullClassName="ua.com.as.service.ControllerClassIntAndStr">
+        <query path="/user/add/{age}" http_methods="GET">
+            <method_name>addAge</method_name>
+            <parameter paramtype="path">
+                <name>age</name>
+                <type>byte</type>
+            </parameter>
+        </query>
+        <query path="/user/add/{name}" http_methods="GET">
+            <method_name>addName</method_name>
+            <parameter paramtype="path">
+                <name>name</name>
+                <type>String</type>
+            </parameter>
+        </query>
+    </controller>
+</configuration>

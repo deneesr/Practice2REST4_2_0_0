@@ -1,0 +1,18 @@
+<configuration>
+    <controller fullClassName="ua.com.as.service.controller7.SameStringPathController">
+        <query path="/user/{s1}" http_methods="GET">
+            <method_name>test1</method_name>
+            <parameter paramtype="path">
+                <name>s1</name>
+                <type>String</type>
+            </parameter>
+        </query>
+        <query path="/user/{s2}" http_methods="GET">
+            <method_name>test2</method_name>
+            <parameter paramtype="path">
+                <name>s2</name>
+                <type>String</type>
+            </parameter>
+        </query>
+    </controller>
+</configuration>

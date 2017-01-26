@@ -1,0 +1,23 @@
+<configuration>
+
+    <auto-scan packages="ua.com.as.service.parsing.controller1, ua.com.as.service.parsing.controller2"/>
+
+    <controller fullClassName="ua.com.as.service.ControllerClass">
+        <query path="/testGet/{id}" responseType="JSON" http_methods="GET, POST">
+            <method_name>testGet</method_name>
+            <parameter paramtype="path">
+                <name>id</name>
+                <type>byte</type>
+            </parameter>
+        </query>
+        <query path="/postTest" responseType="JSON" http_methods="POST">
+            <method_name>postTest</method_name>
+        </query>
+        <query path="/putTest" responseType="JSON" http_methods="PUT">
+            <method_name>putTest</method_name>
+        </query>
+        <query path="/deleteTest" responseType="JSON" http_methods="DELETE">
+            <method_name>deleteTest</method_name>
+        </query>
+    </controller>
+</configuration>

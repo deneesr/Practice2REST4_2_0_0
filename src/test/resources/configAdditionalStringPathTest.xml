@@ -1,0 +1,22 @@
+<configuration>
+    <controller fullClassName="ua.com.as.service.controller7.AdditionalStringPathController">
+        <query path="/user/{s1}" http_methods="GET">
+            <method_name>test1</method_name>
+            <parameter paramtype="path">
+                <name>s1</name>
+                <type>String</type>
+            </parameter>
+        </query>
+        <query path="/user/{s2}/{id}" http_methods="GET">
+            <method_name>test2</method_name>
+            <parameter paramtype="path">
+                <name>s2</name>
+                <type>String</type>
+            </parameter>
+            <parameter paramtype="path">
+                <name>id</name>
+                <type>Integer</type>
+            </parameter>
+        </query>
+    </controller>
+</configuration>

@@ -1,0 +1,91 @@
+<configuration>
+
+    <controller fullClassName="ua.com.as.service.ControllerClass">
+
+        <query path="/testGet/{id}" response_type="JSON"  http_methods="GET, POST">
+
+            <method_name>testGet</method_name>
+
+            <parameter paramtype="path">
+                <name>id</name>
+                <type>byte</type>
+            </parameter>
+
+        </query>
+
+        <query path="/testGetWithQueryParam/{id}" response_type="JSON"   http_methods="GET">
+
+            <method_name>testGetWithQueryParam</method_name>
+
+            <parameter paramtype="path">
+                <name>id</name>
+                <type>int</type>
+            </parameter>
+
+            <parameter paramtype="query">
+                <name>name</name>
+                <type>String</type>
+            </parameter>
+
+        </query>
+
+        <query path="/testPostWithQueryParam/{index}" response_type="JSON"   http_methods="POST">
+
+            <method_name>testPostWithQueryParam</method_name>
+
+            <parameter paramtype="path">
+                <name>index</name>
+                <type>short</type>
+            </parameter>
+
+            <parameter paramtype="query">
+                <name>alphabet</name>
+                <type>char</type>
+            </parameter>
+
+        </query>
+
+        <query path="/postTest/{index}/{alphabet}" response_type="JSON"   http_methods="POST">
+
+            <method_name>postTest</method_name>
+
+            <parameter paramtype="path">
+                <name>index</name>
+                <type>short</type>
+            </parameter>
+
+            <parameter paramtype="path">
+                <name>alphabet</name>
+                <type>String</type>
+            </parameter>
+
+        </query>
+
+        <query path="/putTest/{index}/{alphabet}" response_type="JSON"   http_methods="PUT">
+
+            <method_name>putTest</method_name>
+
+            <parameter paramtype="path">
+                <name>index</name>
+                <type>int</type>
+            </parameter>
+
+            <parameter paramtype="path">
+                <name>alphabet</name>
+                <type>String</type>
+            </parameter>
+
+            <parameter paramtype="query">
+                <name>key</name>
+                <type>char</type>
+            </parameter>
+
+        </query>
+
+        <query path="/deleteTest" response_type="JSON"  http_methods="DELETE">
+            <method_name>deleteTest</method_name>
+        </query>
+
+    </controller>
+
+</configuration>
